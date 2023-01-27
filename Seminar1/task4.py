@@ -26,5 +26,7 @@ if revenue > costs:
     print(f'Рентабельность выручки = {(revenue-costs)/revenue}')
     number = int(input("Введите количество сотрудников: ")) 
     print(f'Прибыль фирмы в расчете на одного сотрудника = {(revenue-costs)/2}') 
-else:
+elif revenue < costs:
     print("Фирма отработала в убыток (( ")
+elif revenue == costs:
+    print("Фирма отработала в ноль, выручка покрыла издержки")   
