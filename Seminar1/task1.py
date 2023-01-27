@@ -16,4 +16,4 @@ name = input("Enter your name: ")
 password = input("Enter your password: ")
 age = int(input("Enter your age: "))
 
-print("Ваши данные для входа в систему: " f'имя - {name},' f'пароль - {password}', f'возраст - {age}')
+print(f'Ваши данные для входа в аккаунт: имя - {name}, пароль - {password}, возраст - {age}')
