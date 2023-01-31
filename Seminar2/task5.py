@@ -17,5 +17,5 @@
 list_user = input("Введите строку из нескольких слов через пробел: ")
 list_user = list_user.split()
 i = 0
-for i,el in enumerate(list_user,1):
-    print(i,el[:10])
+for i, el in enumerate(list_user, 1):
+    print(i, el[:10])
