@@ -15,6 +15,10 @@
 <class 'NoneType'>
 """
 list_task = [5, "string", 0.15, True, None]
-i = 0
-for i in range(len(list_task)):
-    print(type(list_task[i]))
+for el in list_task:
+    print(type(el))
+
+# КАК НЕ НУЖНО ДЕЛАТЬ
+# i = 0
+# for i in range(len(list_task)):
+#     print(type(list_task[i]))
