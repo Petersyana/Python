@@ -18,10 +18,12 @@ print(*list_1)
 i = 0
 list_temp = list_1[0]
 i_temp = 0
-for i in range(0,len(list_1),2):
-    if i < len(list_1)-1:
+for i in range(0, len(list_1), 2):
+    if i < len(list_1) - 1:
         list_temp = list_1[i]
-        list_1[i] = list_1[i+1]
-        list_1[i+1] = list_temp
+        list_1[i], list_1[i + 1] = list_1[i + 1], list_temp  # одна строка вместо двух
 print('Отработан массив')
 print(*list_1)
+
+        # list_1[i] = list_1[i+1]
+        # list_1[i+1] = list_temp
