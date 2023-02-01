@@ -22,9 +22,9 @@ Process finished with exit code 0
 def my_func(a, b):
     if b != 0:
         return a / b
-    else:  
-        print('Вы что? Пытаетесь делить на 0!') 
-   
+    else:
+        print('Вы что? Пытаетесь делить на 0!')
+
 
 a = int(input("Введите первое число - делимое :"))
 b = int(input("Введите второе число - делитель :"))
