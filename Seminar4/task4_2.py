@@ -18,10 +18,9 @@ phone_number = input('Введите Ваш номер телефона - ')
 
 
 def my_func(a, b, c, d, e, f):
-    result = name + ' ' + surname + ' ' + year + ' года рождения, ' + \
-        'проживает в городе ' + city + ', ' + 'email: ' + \
-        mail + ', телефон: ' + phone_number
+    result = print(
+        f'{name} {surname} {year} года рождения, проживает в городе {city}, email: {mail}, телефон: {phone_number}')
     return result
 
 
-print(my_func(a=name, b=surname, c=year, d=city, e=mail, f=phone_number))
+my_func(a=name, b=surname, c=year, d=city, e=mail, f=phone_number)
