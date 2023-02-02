@@ -14,4 +14,5 @@ def my_func(x, y):
         i += 1
     return (1 / result)
 
+
 print(my_func(10, -2))
