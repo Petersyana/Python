@@ -7,8 +7,11 @@
 
 
 def my_func(x, y):
-    result = x ** y
-    return result
-
+    i = 0
+    result = 1
+    while i < abs(y):
+        result = result * x
+        i += 1
+    return (1 / result)
 
 print(my_func(10, -2))
