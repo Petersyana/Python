@@ -10,20 +10,20 @@
 
 
 def my_func(a, b, c=0):
-    summa = 0
+    sum = 0
     if a > b:
-        summa = summa + a
+        sum = sum + a
         if b > c:
-            summa = summa + b
+            sum = sum + b
         else:
-            summa = summa + c
+            sum = sum + c
     else:
-        summa = summa + b
+        sum = sum + b
         if a > c:
-            summa = summa + a
+            sum = sum + a
         else:
-            summa = summa + c
-    return summa
+            sum = sum + c
+    return sum
 
 
 print(f"Сумма наибольших двух аргументов - {my_func(3,4,6)}")
