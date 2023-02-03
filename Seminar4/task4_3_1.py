@@ -12,8 +12,8 @@
 def my_func(a, b, c=0):
     list_1 = [a, b, c]
     list_1.sort()
-    summa = b + c
-    return summa
+    sum = b + c
+    return sum
 
 
 print(f"Сумма наибольших двух аргументов - {my_func(3,4,6)}")
