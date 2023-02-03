@@ -14,8 +14,11 @@
 1. раз
 2. перерефриж 
 """
-list_user = input("Введите строку из нескольких слов через пробел: ")
-list_user = list_user.split()
+list_user = input("Введите строку из нескольких слов через пробел: ").split()
 i = 0
 for i, el in enumerate(list_user, 1):
     print(i, el[:10])
+
+# в строке 17 запись в одну строку двух строк
+# list_user = input("Введите строку из нескольких слов через пробел: ")
+# list_user = list_user.split() - одной строкой
