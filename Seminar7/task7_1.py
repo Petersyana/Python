@@ -19,7 +19,7 @@ from time import sleep
 
 class TrafficLight:
     # определяем приватный атрибут
-    __colors = {'red': 7, 'yellow': 2, 'green': 10}
+    __colors = {'красный': 7, 'желтый': 2, 'зеленый': 10}
 
     def running(self):  # создаем ф-цию для переключения светофора
         for color, time_color in self.__colors.items():
