@@ -16,6 +16,7 @@ from time import sleep
 
 # создаем класс
 
+
 class TrafficLight:
     # определяем приватный атрибут
     __colors = {'red': 7, 'yellow': 2, 'green': 10}
