@@ -7,17 +7,19 @@
 """
 
 
-class DivideByZero:
+class DivideByZero(Exception):
     def __init__(self, text):
         self.text = text
 
-    dividend = float(input(f'Введите делимое - '))  # делимое
+dividend = float(input(f'Введите делимое - '))  # делимое
+divider = float(input(f'Введите делитель - '))  # делитель      
 
-    try:
-        divider = float(input(f'Введите делитель - '))  # делитель
-        result = dividend / divider  # частное
-    except ZeroDivisionError:
-        print("На ноль делить нельзя!")
-        quit()
+try: 
+    if divider == 0: 
+        raise DivideByZero('ОШИБКА! Деление на 0!') 
+    result = dividend / divider 
+except DivideByZero as err: 
+        print(err)
+else: 
+    print(f'Результат: {result}')
 
-    print(result)
