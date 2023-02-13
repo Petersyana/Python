@@ -11,27 +11,32 @@
 """
 
 
-class ErrorElement:
-    def __init__(self, *args):
-        self.list_element = []
+class ErrorElement(Exception):  # класс-исключение
+    def __init__(self, text):
+        self.text = text
 
-    def my_element(self):
 
+def my_stop(stop_input):  # функция для проверки завершения ввода чисел
+    if stop_input == 'Y' or stop_input == 'y':
+        return my_element(number=input('Введите число - '))
+    else:
+        print(f'Ввод окончен')
+        quit()
+
+
+def my_element(number, list_element=[]):  # функция для добавления чисел в список
+    try:
+        if number.isnumeric() == False:  # проверка на исключение
+            raise ErrorElement(
+                'ОШИБКА! Введено не число! В список не добавляется!')
         while True:
-            try:
-                number = int(input('Введите число - '))
-                self.list_element.append(number)  # добавляем число в список
-                print(f'{self.list_element} \n ')  # печатаем список
-            except:
-                print(f"Ошибка ввода! Введено не число")
-                stop_input = input(f'Повторить ввод? Y/N ')
-
-                if stop_input == 'Y' or stop_input == 'y':
-                    print(num.my_element())
-                else:
-                    return f'Ввод окончен'
-                    quit()
+            list_element.append(number)  # добавляем число в список
+            print(f'Текущий список - {list_element} \n ')  # печатаем список
+            my_stop(stop_input=input(f'Продолжать ввод? Y/N '))
+    except ErrorElement as err:
+        print(err)  # печать текста исключения
+        print(f'Текущий список - {list_element} \n ')  # печатаем список
+        my_stop(stop_input=input(f'Продолжать ввод? Y/N '))
 
 
-num = ErrorElement(1)
-print(num.my_element())
+my_element(number=input('Введите число - '))
