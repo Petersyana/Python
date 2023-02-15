@@ -29,7 +29,6 @@ words = ['attribute', 'класс', 'функция', 'type']
 
 for word in words:
     word_b = bytes(word, 'ascii', 'ignore')
-    print(word_b)
     try:
         if word_b == b'':
             raise ErrorByByte(
